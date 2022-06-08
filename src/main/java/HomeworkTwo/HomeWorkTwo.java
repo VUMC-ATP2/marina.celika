@@ -2,6 +2,7 @@ package HomeworkTwo;
 import java.util.Scanner;
 
 import javax.naming.Name;
+import javax.print.attribute.IntegerSyntax;
 import javax.xml.namespace.QName;
 
 public class HomeWorkTwo {
@@ -29,7 +30,10 @@ public class HomeWorkTwo {
         System.out.println();
 
         //2. uzdevums
-        System.out.println("Enter the number of month");
+        Scanner scanner = new Scanner(System.in);
+        String months;
+        System.out.println("Enter the number of months");
+        months = scanner.nextLine();
         int month = 4;
         switch (month) {
             case 1:
@@ -83,15 +87,19 @@ public class HomeWorkTwo {
         System.out.println();
 
         //4.uzdevums
-        String krasa = "Sarkana";
-        String krasa1 = "Dzeltena";
-        String krasa3 = "Zaļa";
-        if (krasa3.equals("Zaļa")) {
-            System.out.println("ir atļauts šķērsot ielu");
-        } else if (krasa1.equals("dzeltena")) {
-            System.out.println("jāsagatavojas, drīz varēsim šķērsot ielu");
-        } else if (krasa.equals("sarkana")) {
-            System.out.println(" ir aizliegts šķērsot ielu");
+        Scanner scanner1 = new Scanner(System.in);
+        String light;
+        System.out.println("Enter the color of traffic light");
+        light = scanner1.nextLine();
+        String krasa = "Red";
+        String krasa1 = "Yellow";
+        String krasa3 = "Green";
+        if (krasa3.equals("Green")) {
+            System.out.println("is allowed to cross the street");
+        } else if (krasa1.equals("Yellow")) {
+            System.out.println("be prepared, we will soon be able to cross the street");
+        } else if (krasa.equals("Red")) {
+            System.out.println("it is forbidden to cross the street");
         }
 
         System.out.println();
@@ -155,25 +163,18 @@ public class HomeWorkTwo {
     }
 
     //7. uzdevums
-    public static void sum(String[] args) {
-        Scanner summa = new Scanner(System.in);
-        System.out.println("Enter the number А = ");
-        int a = summa.nextInt();
-        System.out.println("Enter the number = ");
-        int b = summa.nextInt();
-        System.out.println("Sum = " + (a + b));
+    public static int sum(int a, int b) {
+        int result = a + b;
+        return result;
+
+
     }
         //8.uzdevums
-        public static void Average(String[] args){
-            Scanner average = new Scanner(System.in);
-            System.out.print("Enter first number: ");
-            double number1 = average.nextDouble();
-            System.out.print("Enter second number: ");
-            double number2 = average.nextDouble();
-            System.out.print("Enter third number: ");
-            double number3 = average.nextDouble();
-            System.out.print("The average is: " + ((number1 + number2 + number3)/3));
-        }
+        public static int average(int a, int b, int c){
+            int average = (a+b+c)/3;
+            return average;
+
+                    }
 
 
 
