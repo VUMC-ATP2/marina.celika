@@ -1,4 +1,5 @@
 package Homework;
+
 import java.util.Scanner;
 
 public class LoopHomeWork {
@@ -49,7 +50,7 @@ public class LoopHomeWork {
         }
         System.out.println();
 
-        char letter[] = {'a', 'b', 'c'};
+        char[] letter = {'a', 'b', 'c'};
         for (char Letter : letter) {
             System.out.println(letter);
         }
@@ -66,41 +67,42 @@ public class LoopHomeWork {
         }
         System.out.println();
     }
-        // 5.uzdevums
-        public static int factorial (int value){
-            int x = 5;
-            for (int h = 2; h <= value; h++) {
-                x = x * h;
 
-            }
-            return x;
-
+    // 5.uzdevums
+    public static int factorial(int value) {
+        int x = 5;
+        for (int h = 2; h <= value; h++) {
+            x = x * h;
 
         }
+        return x;
 
 
-        //6.uzdevums
-        public final boolean checkPinCode() {
+    }
 
-            Scanner scanner1 = new Scanner(System.in);
-            String userInput;
+
+    //6.uzdevums
+    public final boolean checkPinCode() {
+
+        Scanner scanner1 = new Scanner(System.in);
+        String userInput;
+        System.out.println("Enter password");
+        String password = "123";
+        userInput = scanner1.nextLine();
+        int i = 0;
+        while (i < 3) {
             System.out.println("Enter password");
-            String password = "123";
-            userInput = scanner1.nextLine();
-            int i = 0;
-               while (i < 3) {
-                System.out.println("Enter password");
 
-                if (userInput.equals(password)){
-                    System.out.println("PIN accepted, welcome back");
-                }
-                i++;
+            if (userInput.equals(password)) {
+                System.out.println("PIN accepted, welcome back");
             }
-            System.out.println("Incorrect PIN, please try again");
+            i++;
+        }
+        System.out.println("Incorrect PIN, please try again");
         return false;
     }
 
-    }
+}
 
 
 
